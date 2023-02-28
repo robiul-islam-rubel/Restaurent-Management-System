@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-
+use App\Http\Controllers\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,3 +27,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+Route::get('/users',[AdminController::class,'user']);
+Route::get("/deleteuser/{id}",[AdminController::class,'delete']);
+Route::get("/foodmenu",[AdminController::class,'foodmenu']);
+Route::post("/uploadfood",[AdminController::class,'uploadfood']);
