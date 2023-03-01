@@ -30,11 +30,11 @@ class AdminController extends Controller
     public function uploadfood(Request $request)
     {
 
-      $data= new khabar();
+      $data= new khabar;
       $image=$request->image;
-
-      $imagename=time().'.'.$image->getClientOriginalExtension();
+      $imagename=time().'.'.$image->getClientoriginalExtension();
       $request->image->move('foodimage',$imagename);
+      
       $data->image=$imagename;
       $data->title=$request->title;
       $data->price=$request->price;
