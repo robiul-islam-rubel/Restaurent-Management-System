@@ -9,7 +9,8 @@
   <body>
     @include("admin.navbar")
     <div style="align:center">
-        <form action="{{url('/uploadfood')}}" method="POST" enctype="multipart/form-data" >
+        <form action="{{url('/uploadfood')}}" method="POST"  enctype="multipart/form-data">
+            @csrf
             <div>
                 <label>Title</label>
                 <input type="text" name="title" placeholder="Write a title" required="">
