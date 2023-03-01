@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Food;
+use App\Models\Khabar;
 
 class AdminController extends Controller
 {
@@ -29,7 +30,7 @@ class AdminController extends Controller
     public function uploadfood(Request $request)
     {
 
-      $data= new food;
+      $data= new khabar();
       $image=$request->image;
 
       $imagename=time().'.'.$image->getClientOriginalExtension();
